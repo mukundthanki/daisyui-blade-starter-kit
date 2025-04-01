@@ -15,11 +15,11 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased">
-    <div>
+    <div class="" x-data="{ openSidebarDrawer: false }">
         @include('layouts.sidebar')
 
         <div class="lg:pl-72 pr-2 py-2 bg-base-200 h-screen min-h-max">
-            <div class="rounded-md bg-base-100 h-full min-h-max">
+            <div class="rounded-md bg-base-100 h-full min-h-max shadow-md">
                 @include('layouts.header')
 
                 <main class="py-10">
