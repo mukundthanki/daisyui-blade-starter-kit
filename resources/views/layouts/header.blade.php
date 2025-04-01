@@ -1,6 +1,6 @@
 
 <div class="glass rounded-tr-md rounded-tl-md sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 px-4 sm:gap-x-6 sm:px-6 lg:px-8 border-b border-neutral-content/20 shadow-xs">
-    <button type="button" class="-m-2.5 p-2.5 lg:hidden">
+    <button type="button" class="-m-2.5 p-2.5 lg:hidden" @click="openSidebarDrawer = true;">
         <span class="sr-only">Open sidebar</span>
         <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -11,9 +11,14 @@
     <div class="h-6 w-px bg-neutral-content/20 lg:hidden" aria-hidden="true"></div>
 
     <div class="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
-        <div class="grid flex-1 grid-cols-1 content-center">
-            <h2>Dashboard</h2>
-        </div>
+        <!-- Page Heading -->
+        @isset($header)
+            <div class="grid flex-1 grid-cols-1 content-center">
+                <h2 class="font-semibold text-xl leading-tight">
+                    {{ $header }}
+                </h2>
+            </div>
+        @endisset
 
         <div class="flex items-center gap-x-4 lg:gap-x-6">
 
